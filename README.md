@@ -2,30 +2,38 @@
 
 ---
 
-# component-template
+# svelte-component-template
 
-A base for building shareable Svelte components. Clone it with [degit](https://github.com/Rich-Harris/degit):
+A base for building shareable Svelte components. Based on [Svelte component template](https://github.com/sveltejs/component-template)
+
 
 ```bash
-npx degit sveltejs/component-template my-new-component
+git clone https://github.globant.com/jaime-cervantes/svelte-component-template my-new-component
 cd my-new-component
 npm install # or yarn
 ```
 
 Your component's source code lives in `src/index.html`.
 
-TODO
+## Your component in action
 
-* [ ] some firm opinions about the best way to test components
-* [ ] update `degit` so that it automates some of the setup work
+- Change some code of in `/demo/index.html` that should match your component behaviour, then run:
+- `npm run build`
+- open the file `/demo/index.html` in your browser to see your component in action!
 
+## ¿How to create a native web component?
 
-## Setting up
-
-* Run `npm init` (or `yarn init`)
-* Replace the default name in rollup.config.js (`SvelteComponent`) with the name of your component, so that people can use it as a standalone script
-* Replace this README with your own
-
+In the rollup.config.js file you can change the Svelte compiler option `customElement` to `true`
+```
+plugins: [
+  svelte({
+    cascade: false,
+    store: true,
+    customElement: false // Change this property to true
+  })
+]
+```
+Then follow the instructions described in the **Your component in action** section
 
 ## Consuming components
 
