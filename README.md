@@ -13,9 +13,9 @@ Your component's source code lives in `src/index.html`.
 
 ## Your component in action
 
-- Change some code of in `/demo/index.html` that should match your component behaviour, then run:
-- `npm run build`
-- open the file `/demo/index.html` in your browser to see your component in action!
+1. Change some code in `/demo/index.html` that should match your component behaviour, then run:
+2. `npm run build`
+3. open the file `/demo/index.html` in your browser to see your component in action!
 
 ## ¿How to create a native web component?
 
