@@ -6,16 +6,34 @@ const name = pkg.name
 	.replace(/^\w/, m => m.toUpperCase())
 	.replace(/-\w/g, m => m[1].toUpperCase());
 
-export default {
+const shared = {
+	plugins: [
+		svelte({
+			cascade: false,
+			store: true,
+			customElement: false // Change it to true for creating a native custom element
+		})
+	]
+}
+
+const demo = {
+	input: 'demo/main.js',
+	output: {
+		file: 'demo/public/main.js',
+		format: 'umd', 
+		name: 'main'
+	}
+}
+
+const module = {
 	input: 'src/index.html',
 	output: [
 		{ file: pkg.module, 'format': 'es' },
 		{ file: pkg.main, 'format': 'umd', name }
-	],
-	plugins: [
-		svelte({
-			cascade: false,
-			store: true
-		})
 	]
 };
+
+export default [
+	Object.assign({}, demo, shared),
+	Object.assign({}, module, shared)
+];
