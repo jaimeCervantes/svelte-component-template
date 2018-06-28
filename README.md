@@ -1,7 +1,3 @@
-*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
-
----
-
 # svelte-component-template
 
 A base for building shareable Svelte components. Based on [Svelte component template](https://github.com/sveltejs/component-template)
