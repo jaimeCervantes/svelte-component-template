@@ -20,7 +20,7 @@ const demo = {
 	input: 'demo/main.js',
 	output: {
 		file: 'demo/public/main.js',
-		format: 'umd', 
+		format: 'umd',
 		name: 'main'
 	}
 }
@@ -33,7 +33,23 @@ const module = {
 	]
 };
 
+const unitTesting = {
+	input: 'src/index.html',
+	output: [
+		{ file: 'test/' + pkg.module, 'format': 'es' },
+		{ file: 'test/' + pkg.main, 'format': 'umd', name }
+	],
+	plugins: [
+		svelte({
+			cascade: false,
+			store: true,
+			customElement: true // Change it to true for creating a native custom element
+		})
+	]
+}
+
 export default [
 	Object.assign({}, demo, shared),
-	Object.assign({}, module, shared)
+	Object.assign({}, module, shared),
+	unitTesting
 ];
