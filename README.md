@@ -19,9 +19,9 @@ Your component's source code lives in `src/index.html`.
 
 ## Unit testing
 
-Your unit test should be in `/test/tests.js`, to see your test just run `npm start` and go to `http://localhost:3000/test`
+Your unit test should be in `/test/` directory, to see your test just run `npm start` and go to `http://localhost:3000/test`
 
-If you want to split your tests in several files, just add these files into `/test/` directory and remember include these files in `/test/index.html` throught `script` tags
+If you want to split your tests in several files just remember include these files in `/test/index.html` throught `script` tags
 
 ## ¿How to create a native web component?
 
