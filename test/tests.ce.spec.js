@@ -1,4 +1,4 @@
-// Your test code here
+// Your test code here, it is for custom elements
 
 // for example:
 
