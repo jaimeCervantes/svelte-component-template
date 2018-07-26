@@ -1,5 +1,6 @@
 import svelte from 'rollup-plugin-svelte';
 import pkg from './package.json';
+import buble from 'rollup-plugin-buble';
 
 const name = pkg.name
 	.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -12,7 +13,8 @@ const shared = {
 			cascade: false,
 			store: true,
 			customElement: false // Change it to true for creating a native custom element
-		})
+		}),
+		buble()
 	]
 }
 
@@ -33,7 +35,16 @@ const module = {
 	]
 };
 
+const unitTesting = {
+	input: 'test/tests.spec.js',
+	output: [
+		{ file: 'test/' + pkg.module, 'format': 'es' },
+		{ file: 'test/' + pkg.main, 'format': 'umd', name }
+	]
+}
+
 export default [
 	Object.assign({}, demo, shared),
-	Object.assign({}, module, shared)
+	Object.assign({}, module, shared),
+	Object.assign({}, unitTesting, shared)
 ];
