@@ -13,15 +13,14 @@ Your component's source code lives in `src/index.html`.
 
 ## Your component in action
 
-1. Change some code in `/demo/index.html` that should match your component behaviour, then run:
-2. `npm start`
-3. Open your browser with `http://localhost:3000/demo` to see your component in action!
+1. `npm start`
+2. Open your browser with `http://localhost:3000/demo` to see your component in action!
 
 ## Unit testing
 
 Your unit test should be in `/test/` directory, to see your test just run `npm start` and go to `http://localhost:3000/test`
 
-If you want to split your tests in several files just remember include these files in `/test/index.html` throught `script` tags
+If you want to split your tests in several files just remember import these files in `/test/tests.spec.js`
 
 ## ¿How to create a native web component?
 
