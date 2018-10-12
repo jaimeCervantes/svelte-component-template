@@ -19,18 +19,17 @@ const shared = {
 }
 
 const demo = {
-	input: 'demo/main.js',
+	input: 'demo/md-demo.html',
 	output: {
-		file: 'demo/public/main.js',
+		file: 'demo/index.js',
 		format: 'umd',
-		name: 'main'
+		name: 'MdDemo'
 	}
 }
 
 const module = {
 	input: 'src/index.html',
 	output: [
-		{ file: pkg.module, 'format': 'es' },
 		{ file: pkg.main, 'format': 'umd', name }
 	]
 };
@@ -38,7 +37,6 @@ const module = {
 const unitTesting = {
 	input: 'test/tests.spec.js',
 	output: [
-		{ file: 'test/' + pkg.module, 'format': 'es' },
 		{ file: 'test/' + pkg.main, 'format': 'umd', name }
 	]
 }
