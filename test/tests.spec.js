@@ -1,5 +1,7 @@
 import Component from '../src/index.html';
 
+// You can import more unit test files or just use these file to import all your unit tests
+
 describe('Given a component', () => {
   const domContainer = document.getElementById('dom');
   const expect = chai.expect;
