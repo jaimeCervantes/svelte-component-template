@@ -19,11 +19,11 @@ const shared = {
 }
 
 const demo = {
-	input: 'demo/md-demo.html',
+	input: 'demo/pw-demo.html',
 	output: {
 		file: 'demo/index.js',
 		format: 'umd',
-		name: 'MdDemo'
+		name: 'PwDemo'
 	}
 }
 

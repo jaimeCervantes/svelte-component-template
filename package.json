@@ -1,5 +1,5 @@
 {
-  "name": "prefix-name",
+  "name": "pw-table",
   "svelte": "src/index.html",
   "module": "index.mjs",
   "main": "index.js",

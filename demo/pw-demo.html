@@ -1,0 +1,110 @@
+<!-- Remember modify this code to match your component, this code is just an example -->
+<section class="pw-demo">
+  <Table className="container-fluid" header={header} rows={rows}></Table>
+
+  <Table className="container-fluid">
+    {#each rows as row}
+      <TableRow className={row.className}>
+        {#each row.items as cell}
+          <svelte:component this={getType(cell.type, types)} {...cell}></svelte:component>
+        {/each}
+      </TableRow>
+    {/each}
+  </Table>
+</section>
+
+<script>
+  import Table from '../src/index.html';
+  import TableRow from '../src/table-row.html';
+  import TableCell from '../src/table-cell.html';
+  
+  export default {
+    tag: 'md-demo',
+    components: {
+      Table,
+      TableRow
+    },
+    // You can add data here to be binding in your component properties:
+    data () {
+      return {
+        types: {
+          TableCell
+        },
+        header: {
+          items: [
+            {
+              className: 'col-12 col-sm-12 col-md-4 text-center font-weight-bold',
+              value: 'Saludo',
+              type: 'TableCell'
+            },
+            {
+              className: 'col-12 col-sm-12 col-md-4 text-center font-weight-bold',
+              value: 'Saludo 2',
+              type: 'TableCell'
+            },
+            {
+              className: 'col-12 col-sm-12 col-md-4 text-center font-weight-bold',
+              value: 'Nombre',
+              type: 'TableCell'
+            }
+          ],
+          className:"row"
+        },
+        rows: [
+          {
+            items: [
+              {
+                className: 'col-12 col-sm-12 col-md-4 text-center',
+                value: 'Hola',
+                type: 'TableCell'
+              },
+              {
+                className: 'col-12 col-sm-12 col-md-4 text-center',
+                value: 'Me llamo',
+                type: 'TableCell'
+              },
+              {
+                className: 'col-12 col-sm-12 col-md-4 text-center',
+                value: 'Jaime Cervantes',
+                type: 'TableCell'
+              }
+            ],
+            className:"row"
+          },
+          {
+            items: [
+              {
+                className: 'col-12 col-sm-12 col-md-4 text-center',
+                value: 'Hola',
+                type: 'TableCell'
+              },
+              {
+                className: 'col-12 col-sm-12 col-md-4 text-center',
+                value: 'Me llamo',
+                type: 'TableCell'
+              },
+              {
+                className: 'col-12 col-sm-12 col-md-4 text-center',
+                value: 'Jaime Cervantes',
+                type: 'TableCell'
+              }
+            ],
+            className:"row"
+          }
+        ]
+      }
+    },
+    helpers: {
+      getType (type, types) {
+        return types[type];
+      }
+    }
+  }
+</script>
+
+<style>
+  .pw-demo {
+    display:block;
+    padding: 10px;
+  }
+</style>
