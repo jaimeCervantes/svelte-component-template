@@ -30,7 +30,8 @@ const demo = {
 const module = {
 	input: 'src/index.html',
 	output: [
-		{ file: pkg.main, 'format': 'umd', name }
+		{ file: pkg.module, 'format': 'es' },
+		{ file: pkg.main, 'format': 'umd', name },
 	]
 };
 
