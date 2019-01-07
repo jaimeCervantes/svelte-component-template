@@ -14,11 +14,13 @@ Your component's source code lives in `src/index.html`.
 ## Your component in action
 
 1. `npm start`
-2. Open your browser with `http://localhost:3000/demo` to see your component in action!
+2. In another termial run `npm run serve`
+3. Open your browser with `http://localhost:1234/demo` to see your component in action!
+4. Open your browser with `http://localhost:1234/test` to see your unit testing in action!
 
 ## Unit testing
 
-Your unit test should be in `/test/` directory, to see your test just run `npm start` and go to `http://localhost:3000/test`
+Your unit test should be in `/test/` directory, to see your test just run `npm start` and go to `http://localhost:1234/test`
 
 If you want to split your tests in several files just remember import these files in `/test/tests.spec.js`
 
