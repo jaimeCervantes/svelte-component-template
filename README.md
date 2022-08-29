@@ -4,7 +4,7 @@ A base for building shareable Svelte components. Based on [Svelte component temp
 
 
 ```bash
-git clone https://github.globant.com/jaime-cervantes/svelte-component-template my-new-component
+git clone git@github.com:jaimeCervantes/svelte-component-template.git
 cd my-new-component
 npm install # or yarn
 ```
